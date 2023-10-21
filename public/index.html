@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000" />
+  <meta name="Admin" content="Admin Panel" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="%PUBLIC_URL%/vendors/feather/feather.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/vendors/style.css">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/images/favicon.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <title>Admin</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root" style="background-color: white;"></div>
+
+</body>
+
+<script>
+  let uniqueId = localStorage.getItem('mac_id');
+
+  if (!uniqueId) {
+    const randomNumber = Math.floor(Math.random() * 100000000);
+    localStorage.setItem('mac_id', randomNumber.toString());
+  }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(() => {
+    $('[data-toggle="minimize"]').click(() => {
+      var body = $('body');
+      console.log("asdfasdfsfd")
+      if ((body.hasClass('sidebar-toggle-display')) || (body.hasClass('sidebar-absolute'))) {
+        body.toggleClass('sidebar-hidden');
+      } else {
+        body.toggleClass('sidebar-icon-only');
+      }
+    });
+  });
+</script>
+
+<script src="%PUBLIC_URL%/vendors/js/vendor.bundle.base.js"></script>
+<script src="%PUBLIC_URL%/vendors/chart.js/Chart.min.js"></script>
+<script src="%PUBLIC_URL%/js/off-canvas.js"></script>
+<script src="%PUBLIC_URL%/js/hoverable-collapse.js"></script>
+<script src="%PUBLIC_URL%/js/template.js"></script>
+<script src="%PUBLIC_URL%/js/settings.js"></script>
+<script src="%PUBLIC_URL%/js/todolist.js"></script>
+<script src="%PUBLIC_URL%/js/chart.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script> -->
+
+</html>
